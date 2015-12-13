@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+
+class TakeThePlaneDown
+{
+    static void Main()
+    {
+        int x = int.Parse(Console.ReadLine());
+        int y = int.Parse(Console.ReadLine());
+        int r = int.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            int xx = int.Parse(Console.ReadLine());
+            int yy = int.Parse(Console.ReadLine());
+            Console.WriteLine("You destroyed a plane at [{0},{1}]", xx, yy);
+        }
+
+        //Version2
+        /*
+        int x = int.Parse(Console.ReadLine());
+        int y = int.Parse(Console.ReadLine());
+        int r = int.Parse(Console.ReadLine());
+        int n = int.Parse(Console.ReadLine());
+        List<double> coord = new List<double>();
+
+        for (int i = 0; i < n; i++)
+        {
+            int xx = int.Parse(Console.ReadLine());
+            int yy = int.Parse(Console.ReadLine());
+
+            if (Math.Pow(xx - x, 2) + Math.Pow(yy - y, 2) <= r * r)
+            {
+                coord.Add(xx);
+                coord.Add(yy);
+            }
+        }
+
+        for (int i = 0; i < coord.Count; i += 2)
+        {
+            Console.WriteLine("You destroyed a plane at [{0},{1}]", coord[i], coord[i + 1]);
+        }
+        */
+    }
+}
