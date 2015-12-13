@@ -1,0 +1,50 @@
+using System;
+using System.Linq;
+
+class ImpressTheGirlfriend
+{
+    static void Main()
+    {
+        decimal r = Math.Ceiling(((decimal)uint.Parse(Console.ReadLine()) / 100) * (decimal)3.5);
+        decimal d = Math.Ceiling((decimal)uint.Parse(Console.ReadLine()) * (decimal)1.5);
+        decimal e = Math.Ceiling((decimal)uint.Parse(Console.ReadLine()) * (decimal)1.95);
+        decimal b = Math.Ceiling((decimal)uint.Parse(Console.ReadLine()) / 2);
+        decimal m = Math.Ceiling((decimal)uint.Parse(Console.ReadLine()));
+        Console.WriteLine("{0:0.00}", Math.Max(r, Math.Max(d, Math.Max(e, Math.Max(b, m)))));
+
+        //decimal[] prices = { r, d, e, b, m };
+        //Console.WriteLine("{0:0.00}", prices.Max());
+
+        //Version 2
+        /*
+        decimal rr = decimal.Parse(Console.ReadLine());
+        decimal dd = decimal.Parse(Console.ReadLine());
+        decimal ee = decimal.Parse(Console.ReadLine());
+        decimal bb = decimal.Parse(Console.ReadLine());
+        decimal mm = decimal.Parse(Console.ReadLine());
+
+        rr = (rr / 100) * 3.5m;
+        dd = dd * 1.5m;
+        ee = ee * 1.95m;
+        bb = bb / 2;
+
+        decimal max1 = Math.Max(rr, dd);
+        decimal max2 = Math.Max(ee, bb);
+        decimal max3 = Math.Max(max1, max2);
+        decimal maxFinal = Math.Max(max3, mm);
+        Console.WriteLine("{0:0.00}", Math.Ceiling(maxFinal));
+
+        //OR
+        decimal[] prices2 = new decimal[] { rr, dd, ee, bb, mm };
+        decimal maxFOR = 0;
+        for (int i = 0; i < prices.Length; i++)
+        {
+            if (prices[i] > maxFOR)
+            {
+                maxFOR = prices[i];
+            }
+        }
+        Console.WriteLine("{0:0.00}", Math.Ceiling(maxFOR));
+        */
+    }
+}
