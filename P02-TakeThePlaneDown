@@ -14,7 +14,11 @@ class TakeThePlaneDown
         {
             int xx = int.Parse(Console.ReadLine());
             int yy = int.Parse(Console.ReadLine());
-            Console.WriteLine("You destroyed a plane at [{0},{1}]", xx, yy);
+
+			if (Math.Pow(xx - x, 2) + Math.Pow(yy - y, 2) <= r * r)
+            {
+				Console.WriteLine("You destroyed a plane at [{0},{1}]", xx, yy);
+            }
         }
 
         //Version2
